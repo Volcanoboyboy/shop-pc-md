@@ -1,0 +1,12 @@
+html,
+body 
+/* 为什么 #app 不写在这里，因为 #app 不属于全局样式，应该归属与 App.vue 组件自己 */
+ {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.el-cascader-panel {
+  max-height: 250px;
+}

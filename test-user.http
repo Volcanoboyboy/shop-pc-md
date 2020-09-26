@@ -1,0 +1,20 @@
+### 使用@定义变量
+@baseURL=http://127.0.0.1:8888/api/private/v1/
+
+### 注释要打三个井号，才会出现 Send Request 按钮
+### 登录
+POST {{baseURL}}login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+### 用户列表
+GET {{baseURL}}users?pagenum=1&pagesize=10 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE2MDAwNDU3MjYsImV4cCI6MTYwMDEzMjEyNn0.FjjL2xouO68A41hgdkAnqi591rHZbDljwzG4NmICe2k
+
+### 左侧菜单
+GET {{baseURL}}menus HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE2MDAwNzQxNjksImV4cCI6MTYwMDE2MDU2OX0.fw0Gf_1PET65_nPYjkCiHNrdNFJMmTwg_XMZPhowaE4
